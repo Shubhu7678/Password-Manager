@@ -4,6 +4,7 @@ const initialState = {
 
     allCredentials: [],
     currentCredential: [],
+    editCredential : false,
 
 }
 
@@ -21,9 +22,13 @@ export const passwordSlice = createSlice({
 
             state.currentCredential = action.payload;
         },
+        setEditCredential: (state, action) => { 
+
+            state.editCredential = action.payload;
+        }
 
     }
 })
 
-export const { setAllCredentials, setCurrentCredential } = passwordSlice.actions;
+export const { setAllCredentials, setCurrentCredential, setEditCredential } = passwordSlice.actions;
 export default passwordSlice.reducer;
