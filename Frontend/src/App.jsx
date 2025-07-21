@@ -1,13 +1,14 @@
 
-import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
 
 function App() {
 
   return (
     <>
-      <div className="h-screen flex items-center justify-center text-2xl font-bold text-blue-600">
-      Vite + React + Tailwind 🚀
-    </div>
+       <Routes>
+          <Route path="/" element={<Home/>} />
+       </Routes>
     </>
   )
 }
